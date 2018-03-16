@@ -1,1 +1,51 @@
 
+数值范围
+
+由于内存的限制，ECMAScript 并不能保存世界上所有的数值。ECMAScript 能够表示的最小数值保
+存在Number.MIN_VALUE 中——在大多数浏览器中，这个值是5e-324；能够表示的最大数值保存在
+Number.MAX_VALUE 中——在大多数浏览器中，这个值是1.7976931348623157e+308。如果某次计算的
+结果得到了一个超出JavaScript 数值范围的值，那么这个数值将被自动转换成特殊的Infinity 值。具
+体来说，如果这个数值是负数，则会被转换成-Infinity（负无穷），如果这个数值是正数，则会被转
+换成Infinity（正无穷）。
+如上所述，如果某次计算返回了正或负的Infinity 值，那么该值将无法继续参与下一次的计算，
+因为Infinity 不是能够参与计算的数值。要想确定一个数值是不是有穷的（换句话说，是不是位于最
+小和最大的数值之间），可以使用isFinite()函数。这个函数在参数位于最小与最大数值之间时会返
+回true，如下面的例子所示：
+var result = Number.MAX_VALUE + Number.MAX_VALUE;
+alert(isFinite(result)); //false
+尽管在计算中很少出现某些值超出表示范围的情况，但在执行极小或极大数值的计算时，检测监控
+这些值是可能的，也是必需的。
+访问Number.NEGATIVE_INFINITY 和Number.POSITIVE_INFINITY 也可以得到负和正Infinity 的值。可以想见，这两个属性中分别保存着-Infinity 和
+Infinity。
+
+alert(isNaN(NaN)); //true
+alert(isNaN(10)); //false（10 是一个数值）
+alert(isNaN("10")); //false（可以被转换成数值10）
+alert(isNaN("blue")); //true（不能转换成数值）
+alert(isNaN(true)); //false（可以被转换成数值1）
+
+var num1 = Number("Hello world!"); //NaN
+var num2 = Number(""); //0
+var num3 = Number("000011"); //11
+var num4 = Number(true); //1
+
+指定基数会影响到转换的输出结果。例如：
+var num1 = parseInt("10", 2); //2 （按二进制解析）
+var num2 = parseInt("10", 8); //8 （按八进制解析）
+var num3 = parseInt("10", 10); //10 （按十进制解析）
+var num4 = parseInt("10", 16); //16 （按十六进制解析）
+
+
+var num1 = parseFloat("1234blue"); //1234 （整数）
+var num2 = parseFloat("0xA"); //0
+var num3 = parseFloat("22.5"); //22.5
+var num4 = parseFloat("22.34.5"); //22.34
+var num5 = parseFloat("0908.5"); //908.5
+var num6 = parseFloat("3.125e7"); //31250000
+var num7 = parseFloat("123.a"); //123
+
+
+
+
+
+
