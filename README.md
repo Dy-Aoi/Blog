@@ -8,4 +8,4 @@
 * [JS](https://github.com/Dy-Aoi/Blog/tree/master/JS)
 * [Wx](https://github.com/Dy-Aoi/Blog/tree/master/Wx)
 * [TS](https://github.com/Dy-Aoi/Blog/tree/master/TS)
-* [ES6 && ES7](https://github.com/Dy-Aoi/Blog/tree/master/ES6-7)
+* [ES6 && ES7](https://github.com/Dy-Aoi/Blog/tree/master/ES6-ES7)
