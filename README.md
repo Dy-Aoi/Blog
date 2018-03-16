@@ -2,7 +2,7 @@
 前端小骷髅
 ============
 
-> 努力让自己值钱ing* * *
+> 努力让自己值钱ing。。。
 
 * [React](https://github.com/Dy-Aoi/Blog/tree/master/React)
 * [JS](https://github.com/Dy-Aoi/Blog/tree/master/JS)
