@@ -1,0 +1,47 @@
+基础数据类型：
+
+Boolean 布尔值  var isDone: boolean = false;
+
+Number 数字	var decLiteral: number = 6;
+
+String 字符串   var name: string = "bob";  name = 'smith';
+
+Array 数组      var list: number[] = [1, 2, 3];
+
+Tuple 元组      
+    // 声明一个元组类型
+		var x: [string, number];
+		// 初始化他
+		x = ['hello', 10]; // 准确
+		// 错误的初始化
+		x = [10, 'hello']; // 错误
+
+Enum 枚举	
+    enum Color {Red = 1, Green = 2, Blue = 4};
+		var c: Color = Color.Green;
+		enum Color {Red = 1, Green, Blue};
+		var colorName: string = Color[2];
+		alert(colorName);
+
+Any             
+    var notSure: any = 4;
+		notSure = "maybe a string instead";
+		notSure = false; // okay, definitely a boolean
+
+		var notSure: any = 4;
+		notSure.ifItExists(); // 没问题，在运行时有可能有 ifItExists 这个方法
+		notSure.toFixed(); // 没问题，toFixed 是真实存在的方法 (但是编译器不会验证准确性)
+		var prettySure: Object = 4;
+		prettySure.toFixed(); // 错误，不行就是不行了，使用any吧
+
+		var list: any[] = [1, true, "free"];
+		list[1] = 100;
+
+Void		
+    void就像any的相反面：void就是没有，any就是所有。没有返回值的函数就可以认为是'void'类型：
+		function warnUser(): void {
+		    alert("This is my warning message");
+		}
+
+		不建议声明一个变量是 void类型，因为这个变量就只能赋值undefined 或 null。
+		var unusable: void = undefined;
