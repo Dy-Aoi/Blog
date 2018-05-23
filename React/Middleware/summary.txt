@@ -1,0 +1,24 @@
+1. 什么时候触发middleware？
+
+
+
+2. 一个标准的middleware是什么样子？
+
+
+
+
+3. 为什么要有middleware？
+
+
+
+4.最后一个next是谁？
+
+
+
+
+5. 介绍一些特殊的middleware？
+
+
+
+
+6.NewUI中有哪些middleware？
