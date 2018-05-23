@@ -48,7 +48,7 @@
 8. Connect
   1） Connect了什么 和 什么？
   2） 他是 HOC 吗？
-9.Router
+9. Router
   1） React-router是做什么的？
   2） React-router-redux是做什么的？
   
