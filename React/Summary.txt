@@ -51,3 +51,6 @@
 9.Router
   1） React-router是做什么的？
   2） React-router-redux是做什么的？
+  
+Redux:  
+  https://redux.js.org/api-reference
